@@ -6,7 +6,7 @@ import java.io._
 
 object SimpleApp {
   def main(args: Array[String]) {
-	val logFile = "1900.csv" // Should be some file on your system
+	val logFile = "../resources/1900.csv" // Should be some file on your system
     val conf = new SparkConf().setAppName("Hello Spark")
     val sc = new SparkContext(conf)
     val logData = sc.textFile(logFile) //segundo argumento é número de partições
@@ -29,8 +29,5 @@ object SimpleApp {
     resultsForTMax.take(10).foreach(println)
 
 
-    //val numAs = logData.filter(line => line.contains("a")).count()
-    //val numBs = logData.filter(line => line.contains("b")).count()
-    println("Lines with a: %s, Lines with b: %s".format(numAs, numBs))
   }
 }
