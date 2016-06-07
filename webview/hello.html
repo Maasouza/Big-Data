@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -25,7 +26,7 @@
           data.addColumn('number', 'Temperatura (°C)');
           var rows=[]
           if(lines!=null){
-            for(i=0;i<50;i++){
+            for(i=0;i<lines.length;i++){
               col = lines[i].toString().split(',')
               rows.push([""+col[2]+"/0"+col[1]+"", parseInt(col[3])/10]);
             }
@@ -35,7 +36,7 @@
 
         // Set chart options
         var options = {'title':'Temperatura entre o dia '+rows[0][0]+' e '+rows[rows.length-1][0],
-                       'width':1400,
+                       'width':1300,
                        'height':600};
 
         // Instantiate and draw our chart, passing in some options.
@@ -95,6 +96,6 @@
   <body>
     <!--Div para o grafico-->
       <input type="file" id="csvFileInput" onchange="handleFiles(this.files);" accept=".csv">
-      <div id="chart_div" style="width:1400; height:600"></div>
+      <div id="chart_div" style="width:1300; height:600"></div>
   </body>
 </html>
