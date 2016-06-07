@@ -1,0 +1,101 @@
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--Carregar API AJAX-->
+      <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+      <script type="text/javascript">
+
+
+        // Load the Visualization API and the piechart package.
+        google.load('visualization', '1.0', {'packages':['corechart']});
+
+        // Set a callback to run when the Google Visualization API is loaded.
+        google.setOnLoadCallback(drawChart);
+
+        // Callback that creates and populates a data table, 
+        // instantiates the pie chart, passes in the data and
+        // draws it.
+       
+
+      function drawChart(lines) {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn('string', 'dia');
+          data.addColumn('number', 'Temperatura (°C)');
+          var rows=[]
+          if(lines!=null){
+            for(i=0;i<lines.length;i++){
+              col = lines[i].toString().split(',')
+              rows.push([""+col[2]+"/0"+col[1]+"", parseInt(col[3])/10]);
+            }
+            data.addRows(rows);
+          }
+
+
+        // Set chart options
+        var options = {'title':'Temperatura entre o dia '+rows[0][0]+' e '+rows[rows.length-1][0],
+                       'width':1300,
+                       'height':600};
+
+        // Instantiate and draw our chart, passing in some options.
+        var chart = new google.visualization.ComboChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+      //----------------------arquivo
+        
+
+           function handleFiles(files) {
+            // Check for the various File API support.
+            if (window.FileReader) {
+                // FileReader are supported.
+                getAsText(files[0]);
+            } else {
+                alert('FileReader are not supported in this browser.');
+            }
+          }
+
+          function getAsText(fileToRead) {
+            var reader = new FileReader();
+            // Read file into memory as UTF-8      
+            reader.readAsText(fileToRead);
+            // Handle errors load
+            reader.onload = loadHandler;
+            reader.onerror = errorHandler;
+          }
+
+          function loadHandler(event) {
+            var csv = event.target.result;
+            processData(csv);
+          }
+
+          function processData(csv) {
+              var allTextLines = csv.split(/\r\n|\n/);
+              var lines = [];
+              for (var i=0; i<allTextLines.length; i++) {
+                  var data = allTextLines[i].split(';');
+                      var tarr = [];
+                      for (var j=0; j<data.length; j++) {
+                          tarr.push(data[j]);
+                      }
+                      lines.push(tarr);
+              }
+              
+              drawChart(lines);
+          }
+
+          function errorHandler(evt) {
+            if(evt.target.error.name == "NotReadableError") {
+                alert("Canno't read file !");
+            }
+          }
+
+      </script>
+  </head>
+  <body>
+    <!--Div para o grafico-->
+      <input type="file" id="csvFileInput" onchange="handleFiles(this.files);" accept=".csv">
+      <div id="chart_div" style="width:1300; height:600"></div>
+  </body>
+</html>
