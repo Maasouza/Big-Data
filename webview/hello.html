@@ -22,12 +22,12 @@
           // Create the data table.
           var data = new google.visualization.DataTable();
           data.addColumn('string', 'dia');
-          data.addColumn('number', 'Temperatura');
+          data.addColumn('number', 'Temperatura (°C)');
           var rows=[]
           if(lines!=null){
             for(i=0;i<50;i++){
               col = lines[i].toString().split(',')
-              rows.push([""+col[2]+"/0"+col[1]+"", parseInt(col[3])]);
+              rows.push([""+col[2]+"/0"+col[1]+"", parseInt(col[3])/10]);
             }
             data.addRows(rows);
           }
