@@ -12,7 +12,8 @@ UFRJ – DEL - Departamento de Engenharia Eletrônica e de Computação.
 
 Professor: Alexandre de Assis Bento Lima.  
 
-Alunos: Aramys Matos, Celso Tinoco, Leonardo Souza, Lucas Gomes, Luciana Cruz, Marcos Aurélio, Vinicius Alves.  
+####Alunos: Aramys Matos, Celso Tinoco, Leonardo Souza, Lucas Gomes, Luciana Cruz, Marcos Aurélio, Vinicius Alves.  
+
 --
 ##Introdução
 Este projeto é um webservice que tem o objetivo de comparar  mudanças climáticas no mundo com o passar dos anos, levando em consideração dados coletados desde 1763. 
