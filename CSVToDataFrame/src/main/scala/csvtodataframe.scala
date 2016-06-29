@@ -7,7 +7,7 @@ import org.apache.spark.SparkConf
 
 object CSVToDataFrame {
   def main(args: Array[String]) {
-	val logFile = "1900.csv" // Should be some file on your system
+	val logFile = "1899.csv" // Should be some file on your system
     val conf = new SparkConf().setAppName("CSVToDataFrame").setMaster("local")
     val sc = new SparkContext(conf)
     val sqlContext = new org.apache.spark.sql.SQLContext(sc)
