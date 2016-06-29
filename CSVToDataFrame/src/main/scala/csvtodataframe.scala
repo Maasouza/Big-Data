@@ -17,7 +17,7 @@ object CSVToDataFrame {
         .option("inferSchema", "true") //automatically infer data types
         .load(logFile)
 
-
+    df.show(10, false)
     sc.stop
 
   }

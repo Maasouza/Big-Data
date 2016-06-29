@@ -2,6 +2,8 @@ name := "CSVToDataFrame"
 
 version :="1.0"
 
+fork := true
+
 scalaVersion :="2.10.4"
 
 libraryDependencies ++= Seq(
