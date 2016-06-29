@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="ivy-report.xsl"?>
+<ivy-report version="1.0">
+	<info
+		organisation="org.scala-sbt.temp"
+		module="temp-module-c16632b1229f6d5cc5cab51a5994c9a32d044e20"
+		revision="1.0.0-M3"
+		conf="component"
+		confs="component"
+		date="20160629170501"/>
+	<dependencies>
+		<module organisation="org.scala-sbt" name="compiler-bridge_2.10">
+			<revision name="1.0.0-M3" status="release" pubdate="20160512043433" resolver="public" artresolver="public" homepage="https://github.com/sbt/zinc" downloaded="true" searched="true" default="false" conf="default, compile, runtime, default(compile), master" position="0">
+				<license name="BSD New" url="https://github.com/sbt/sbt/blob/0.13/LICENSE"/>
+				<metadata-artifact status="successful" details="" size="4048" time="655" location="/home/lucas/.ivy2/cache/org.scala-sbt/compiler-bridge_2.10/ivy-1.0.0-M3.xml" searched="true" original-local-location="/home/lucas/.ivy2/cache/org.scala-sbt/compiler-bridge_2.10/ivy-1.0.0-M3.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-sbt/compiler-bridge_2.10/1.0.0-M3/compiler-bridge_2.10-1.0.0-M3.pom"/>
+				<caller organisation="org.scala-sbt.temp" name="temp-module-c16632b1229f6d5cc5cab51a5994c9a32d044e20" conf="component" rev="1.0.0-M3" rev-constraint-default="1.0.0-M3" rev-constraint-dynamic="1.0.0-M3" callerrev="1.0.0-M3"/>
+				<artifacts>
+					<artifact name="compiler-bridge_2.10" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="33903" time="830" location="/home/lucas/.ivy2/cache/org.scala-sbt/compiler-bridge_2.10/srcs/compiler-bridge_2.10-1.0.0-M3-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/scala-sbt/compiler-bridge_2.10/1.0.0-M3/compiler-bridge_2.10-1.0.0-M3-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-sbt" name="util-logging_2.10">
+			<revision name="0.1.0-M13" status="release" pubdate="20160511125712" resolver="public" artresolver="public" homepage="https://github.com/sbt/util" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="4">
+				<license name="BSD New" url="https://github.com/sbt/sbt/blob/0.13/LICENSE"/>
+				<metadata-artifact status="successful" details="" size="3553" time="594" location="/home/lucas/.ivy2/cache/org.scala-sbt/util-logging_2.10/ivy-0.1.0-M13.xml" searched="true" original-local-location="/home/lucas/.ivy2/cache/org.scala-sbt/util-logging_2.10/ivy-0.1.0-M13.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-sbt/util-logging_2.10/0.1.0-M13/util-logging_2.10-0.1.0-M13.pom"/>
+				<caller organisation="org.scala-sbt" name="compiler-bridge_2.10" conf="default, compile, runtime, master" rev="0.1.0-M13" rev-constraint-default="0.1.0-M13" rev-constraint-dynamic="0.1.0-M13" callerrev="1.0.0-M3"/>
+				<artifacts>
+					<artifact name="util-logging_2.10" type="jar" ext="jar" status="successful" details="" size="117286" time="750" location="/home/lucas/.ivy2/cache/org.scala-sbt/util-logging_2.10/jars/util-logging_2.10-0.1.0-M13.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/scala-sbt/util-logging_2.10/0.1.0-M13/util-logging_2.10-0.1.0-M13.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="jline" name="jline">
+			<revision name="2.13" status="release" pubdate="20150810133856" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="6">
+				<license name="The BSD License" url="http://www.opensource.org/licenses/bsd-license.php"/>
+				<metadata-artifact status="no" details="" size="4449" time="0" location="/home/lucas/.ivy2/cache/jline/jline/ivy-2.13.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/jline/jline/2.13/jline-2.13.pom"/>
+				<caller organisation="org.scala-sbt" name="util-logging_2.10" conf="compile, runtime" rev="2.13" rev-constraint-default="2.13" rev-constraint-dynamic="2.13" callerrev="0.1.0-M13"/>
+				<artifacts>
+					<artifact name="jline" type="jar" ext="jar" status="no" details="" size="248566" time="0" location="/home/lucas/.ivy2/cache/jline/jline/jars/jline-2.13.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/jline/jline/2.13/jline-2.13.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.fusesource.jansi" name="jansi">
+			<revision name="1.11" status="release" pubdate="20130513102123" resolver="public" artresolver="public" homepage="" downloaded="true" searched="true" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="7">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="successful" details="" size="3601" time="600" location="/home/lucas/.ivy2/cache/org.fusesource.jansi/jansi/ivy-1.11.xml" searched="true" original-local-location="/home/lucas/.ivy2/cache/org.fusesource.jansi/jansi/ivy-1.11.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/fusesource/jansi/jansi/1.11/jansi-1.11.pom"/>
+				<caller organisation="jline" name="jline" conf="compile, runtime" rev="1.11" rev-constraint-default="1.11" rev-constraint-dynamic="1.11" callerrev="2.13"/>
+				<artifacts>
+					<artifact name="jansi" type="jar" ext="jar" status="no" details="" size="114415" time="0" location="/home/lucas/.ivy2/cache/org.fusesource.jansi/jansi/jars/jansi-1.11.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/fusesource/jansi/jansi/1.11/jansi-1.11.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-lang" name="scala-library">
+			<revision name="2.10.6" status="release" pubdate="20150918063528" resolver="public" artresolver="public" homepage="http://www.scala-lang.org/" extra-info.apiURL="http://www.scala-lang.org/api/2.10.6/" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="5">
+				<license name="BSD-like" url="http://www.scala-lang.org/downloads/license.html
+         "/>
+				<metadata-artifact status="successful" details="" size="2044" time="621" location="/home/lucas/.ivy2/cache/org.scala-lang/scala-library/ivy-2.10.6.xml" searched="true" original-local-location="/home/lucas/.ivy2/cache/org.scala-lang/scala-library/ivy-2.10.6.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.pom"/>
+				<caller organisation="org.scala-sbt" name="io_2.10" conf="compile, runtime" rev="2.10.5" rev-constraint-default="2.10.5" rev-constraint-dynamic="2.10.5" callerrev="1.0.0-M6"/>
+				<caller organisation="org.scala-sbt" name="util-logging_2.10" conf="compile, runtime" rev="2.10.6" rev-constraint-default="2.10.6" rev-constraint-dynamic="2.10.6" callerrev="0.1.0-M13"/>
+				<artifacts>
+					<artifact name="scala-library" type="jar" ext="jar" status="successful" details="" size="7132001" time="8116" location="/home/lucas/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.10.6.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+			<revision name="2.10.5" status="release" pubdate="20150226225430" resolver="public" artresolver="public" evicted="latest-revision" evicted-reason="" homepage="http://www.scala-lang.org/" extra-info.apiURL="http://www.scala-lang.org/api/2.10.5/" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="-1">
+				<license name="BSD-like" url="http://www.scala-lang.org/downloads/license.html
+         "/>
+				<metadata-artifact status="successful" details="" size="2044" time="586" location="/home/lucas/.ivy2/cache/org.scala-lang/scala-library/ivy-2.10.5.xml" searched="true" original-local-location="/home/lucas/.ivy2/cache/org.scala-lang/scala-library/ivy-2.10.5.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.10.5/scala-library-2.10.5.pom"/>
+				<evicted-by rev="2.10.6"/>
+				<caller organisation="org.scala-sbt" name="io_2.10" conf="compile, runtime" rev="2.10.5" rev-constraint-default="2.10.5" rev-constraint-dynamic="2.10.5" callerrev="1.0.0-M6"/>
+				<artifacts>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-sbt" name="io_2.10">
+			<revision name="1.0.0-M6" status="release" pubdate="20160511122312" resolver="public" artresolver="public" homepage="https://github.com/sbt/io" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="3">
+				<license name="BSD New" url="https://github.com/sbt/sbt/blob/0.13/LICENSE"/>
+				<metadata-artifact status="successful" details="" size="3355" time="610" location="/home/lucas/.ivy2/cache/org.scala-sbt/io_2.10/ivy-1.0.0-M6.xml" searched="true" original-local-location="/home/lucas/.ivy2/cache/org.scala-sbt/io_2.10/ivy-1.0.0-M6.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-sbt/io_2.10/1.0.0-M6/io_2.10-1.0.0-M6.pom"/>
+				<caller organisation="org.scala-sbt" name="compiler-bridge_2.10" conf="default, compile, runtime, master" rev="1.0.0-M6" rev-constraint-default="1.0.0-M6" rev-constraint-dynamic="1.0.0-M6" callerrev="1.0.0-M3"/>
+				<artifacts>
+					<artifact name="io_2.10" type="jar" ext="jar" status="successful" details="" size="261776" time="866" location="/home/lucas/.ivy2/cache/org.scala-sbt/io_2.10/jars/io_2.10-1.0.0-M6.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/scala-sbt/io_2.10/1.0.0-M6/io_2.10-1.0.0-M6.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-sbt" name="compiler-interface">
+			<revision name="1.0.0-M3" status="release" pubdate="20160512043337" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/sbt/zinc" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="1">
+				<license name="BSD New" url="https://github.com/sbt/sbt/blob/0.13/LICENSE"/>
+				<metadata-artifact status="no" details="" size="2663" time="0" location="/home/lucas/.ivy2/cache/org.scala-sbt/compiler-interface/ivy-1.0.0-M3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-sbt/compiler-interface/1.0.0-M3/compiler-interface-1.0.0-M3.pom"/>
+				<caller organisation="org.scala-sbt" name="compiler-bridge_2.10" conf="default, compile, runtime, master" rev="1.0.0-M3" rev-constraint-default="1.0.0-M3" rev-constraint-dynamic="1.0.0-M3" callerrev="1.0.0-M3"/>
+				<artifacts>
+					<artifact name="compiler-interface" type="jar" ext="jar" status="no" details="" size="74130" time="0" location="/home/lucas/.ivy2/cache/org.scala-sbt/compiler-interface/jars/compiler-interface-1.0.0-M3.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/scala-sbt/compiler-interface/1.0.0-M3/compiler-interface-1.0.0-M3.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-sbt" name="util-interface">
+			<revision name="0.1.0-M13" status="release" pubdate="20160511125639" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/sbt/util" downloaded="false" searched="false" default="false" conf="master(*), compile, runtime(*), master(compile), runtime, compile(*), master" position="2">
+				<license name="BSD New" url="https://github.com/sbt/sbt/blob/0.13/LICENSE"/>
+				<metadata-artifact status="no" details="" size="2350" time="0" location="/home/lucas/.ivy2/cache/org.scala-sbt/util-interface/ivy-0.1.0-M13.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-sbt/util-interface/0.1.0-M13/util-interface-0.1.0-M13.pom"/>
+				<caller organisation="org.scala-sbt" name="util-logging_2.10" conf="compile, runtime" rev="0.1.0-M13" rev-constraint-default="0.1.0-M13" rev-constraint-dynamic="0.1.0-M13" callerrev="0.1.0-M13"/>
+				<caller organisation="org.scala-sbt" name="compiler-interface" conf="compile, runtime" rev="0.1.0-M13" rev-constraint-default="0.1.0-M13" rev-constraint-dynamic="0.1.0-M13" callerrev="1.0.0-M3"/>
+				<artifacts>
+					<artifact name="util-interface" type="jar" ext="jar" status="no" details="" size="4426" time="0" location="/home/lucas/.ivy2/cache/org.scala-sbt/util-interface/jars/util-interface-0.1.0-M13.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/scala-sbt/util-interface/0.1.0-M13/util-interface-0.1.0-M13.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+	</dependencies>
+</ivy-report>
