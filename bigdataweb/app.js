@@ -1,4 +1,6 @@
 var express = require('express');
+var bodyParser = require('body-parser')
+
 var app = express();
 
 app.use(function(req, res, next) {
@@ -6,6 +8,9 @@ app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   next();
 });
+
+app.use(bodyParser.json());
+
 
 
 app.post('/teste', function (req, res) {
@@ -16,5 +21,5 @@ app.post('/teste', function (req, res) {
 });
 
 app.listen(3000, function () {
-  console.log('Example app listening on port 3000!');
+  console.log('Running on localhost:3000 !');
 });

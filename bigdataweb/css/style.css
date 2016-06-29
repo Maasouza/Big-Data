@@ -1,0 +1,60 @@
+#leftMenu{
+			width:350px;
+			height:100%;
+			background:#eee;
+			color:#333;
+			box-shadow:2px 2px 12px #999;
+		}	
+		
+		#leftMenu input{
+			background:transparent;
+			color:#333;
+			height:33px;
+			width:200px;
+			padding:5px;
+			margin-bottom:15px;
+			border:2px solid #222;
+			border-radius:7px;
+		}
+
+
+
+		#leftMenu input[type="button"]{
+			color:#333;
+			height:33px;
+			width:200px;
+			padding:5px;
+			margin-bottom:15px;
+			border:none;
+			border-radius:7px;
+			background:#009340;
+		}		
+
+
+
+		fieldset{position:absolute;
+			top:calc(20%);
+			border-radius:7px;
+			border:2px #333 solid;
+			width:300px;
+		}
+
+		body{
+			margin:0;
+			padding:0;
+		}
+
+		#googleMap{
+			box-shadow:0px 0px 15px 3px #999;
+			position:absolute;
+			left:500px;
+			top:100px;
+			width:700px;
+			height:400px;
+			background:#ddd;
+		}
+
+		#latlong input{
+			width:50px;
+			margin-right:10px;
+		}

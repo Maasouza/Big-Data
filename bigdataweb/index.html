@@ -1,95 +1,25 @@
 <html>
 	<head>
+		<meta charset="utf-8" />
+		<title>Big Data</title>
+		<script src="js/script.js" type="text/javascript" charset="utf-8" async defer></script>
+		<script src="https://maps.googleapis.com/maps/api/js"></script>
+		<script>
+			
+function initialize() {
+  var mapOptions = {
+    center: new google.maps.LatLng(-34.397, 150.644),
+    zoom: 1,
+    minZoom: 1
+  };
+  var map = new google.maps.Map(document.getElementById("googleMap"), mapOptions);
+}
 
+google.maps.event.addDomListener(window, 'load', initialize);
+		</script>
+
+		<link rel="stylesheet" type="text/css" href="css/style.css">
 	</head>
-	<style>
-		#leftMenu{
-			width:350px;
-			height:100%;
-			background:#eee;
-			color:#333;
-		}	
-		
-		#leftMenu input{
-			background:transparent;
-			color:#333;
-			height:33px;
-			width:200px;
-			padding:5px;
-			margin-bottom:15px;
-			border:2px solid #373379;
-			border-radius:7px;
-		}
-
-
-
-		#leftMenu input[type="button"]{
-			color:#333;
-			height:33px;
-			width:200px;
-			padding:5px;
-			margin-bottom:15px;
-			border:none;
-			border-radius:7px;
-			background:#009340;
-		}		
-
-
-
-		fieldset{
-			top:50px;
-			border-radius:7px;
-			border:2px #333 solid;
-			width:300px;
-		}
-
-		body{
-			margin:0;
-			padding:0;
-		}
-
-		#map{
-			position:absolute;
-			left:500px;
-			top:100px;
-			width:700px;
-			height:400px;
-			background:#ddd;
-		}
-
-		#latlong input{
-			width:50px;
-			margin-right:10px;
-		}
-	</style>
-	<script>
-
-	var mandarRequest = function(type){
-		var data = {
-			"pais":document.getElementById("pais").value,
-			"lat":document.getElementById("pais").value,
-			"long":document.getElementById("pais").value,
-			"data1":document.getElementById("pais").value,
-			"data2":document.getElementById("pais").value
-		}
-	    var objPedidoAJAX = new XMLHttpRequest();
-	    objPedidoAJAX.open("POST", "http://localhost:3000/"+type);
-	    objPedidoAJAX.setRequestHeader("Content-Type","application/json;charset=UTF-8");
-	    // Prepara recebimento da resposta: tipo da resposta JSON!
-	    objPedidoAJAX.responseType = 'json';
-	    objPedidoAJAX.onreadystatechange =
-	        function() {
-	            if(objPedidoAJAX.readyState===4 && objPedidoAJAX.status===200){
-	                alert(objPedidoAJAX.response.alert);
-	            }
-	        };
-	    // Envio do pedido
-	    
-	    objPedidoAJAX.send(JSON.stringify(data));
-
-	};
-
-	</script>
 <body>
 	<div id="leftMenu">
 		<div align="center">
@@ -97,29 +27,52 @@
 				<legend align="center">Busca</legend>			
 				<table>
 					<tr>
-						<td></td><td><input type="text" id="pais" placeholder="pais"/></td>
+						<td></td>
+						<td>
+							<input type="text" id="pais" placeholder="Pais"/>
+						</td>
 					</tr>
 					<tr>
-						<td>De</td><td><input type="date" placeholder="data"></td>
-					</tr>
-				  	<tr>
-						<td>At&eacute;</td><td><input type="date" placeholder="data"></td>
-					</tr>
-					<tr id="latlong" align="center">
-					<td>Ponto 1</td><td colspan="2"><input type="text" id="latlong" placeholder="Lat"><input class="ll" type="text" placeholder="Long"></td>
-					</tr>
-					<tr id="latlong" align="center">
-						<td>Ponto 2</td><td colspan="2"><input type="text" id="latlong" placeholder="Lat"><input class="ll" type="text" placeholder="Long"></td>
+						<td>De</td>
+						<td>
+							<input type="date" id="dataI" placeholder="AAAA-MM-DD"/>
+						</td>
 					</tr>
 
 				  	<tr>
-						<td></td><td><input type="button" onclick="mandarRequest('teste');" placeholder="data" value="Buscar"></td>
+						<td>At&eacute;</td>
+						<td>
+							<input type="date" id="dataF" placeholder="AAAA-MM-DD">
+						</td>
+					</tr>
+
+					<tr id="latlong" align="center">
+						<td>Ponto 1</td>
+						<td colspan="2">
+							<input type="text" id="lat1" placeholder="Lat">
+							<input id="long1" type="text" placeholder="Long">
+						</td>
+					</tr>
+
+					<tr id="latlong" align="center">
+						<td>Ponto 2</td>
+						<td colspan="2">
+							<input type="text" id="lat2" placeholder="Lat">
+							<input id="long2" type="text" placeholder="Long">
+						</td>
+					</tr>
+
+				  	<tr>
+						<td></td>
+						<td>
+							<input type="button" onclick="mandarRequest('teste');" placeholder="data" value="Buscar">
+						</td>
 					</tr>
 				</table>
 			</fieldset>		
 		</div>
 	</div>
-	<div id="map">
+	<div id="googleMap">
 	</div>
 </body>
 </html>
