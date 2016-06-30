@@ -10,3 +10,5 @@ l.split(",")(2),l.split(",")(3).toInt)).toDF();
 
 csvdf.take(10).foreach(println);
 csvdf.registerTempTable("Climate");
+sqlContext.sql("create table Climate as select * from Climate"); //Cria tabela permanente
+//csvdf.write().saveAsTable("Climate"); Não testado, supostamente cria uma tabela permanente
