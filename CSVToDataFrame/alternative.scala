@@ -27,6 +27,8 @@ val staxcsvs = csvs.join(station).map(l=>Register(l._1,l._2._1._1,l._2._1._2,l._
 staxcsvs.take(10).foreach(println);
 staxcsvs.write.save("wasb://data@datagrupo8.blob.core.windows.net/dados.parquet");
 
-staxcsvs.registerTempTable("Climate");
+//lê um arquivo parquet
+val df = sqlContext.read.load("wasb://data@datagrupo8.blob.core.windows.net/dados.parquet")
+df.registerTempTable("Climate");
 sqlContext.sql("create table Climate as select * from Climate"); //Cria tabela permanente
 //staxcsvs.write().saveAsTable("Climate"); Não testado, supostamente cria uma tabela permanente
